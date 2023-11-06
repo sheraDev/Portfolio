@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Schéhérazade" description="">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/portrait.png"
+					alt="Shera"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+					My passion for web development spans both back-end and front-end domains. 
+					I focus on PHP and database management with MySQL and MariaDB for robust 
+					back-end solutions. On the front-end, I leverage technologies like JavaScript, 
+					HTML, CSS, and Bootstrap to create visually captivating and user-friendly 
+					interfaces.
+
+					My approach involves creating efficient and effective back-end systems that 
+					seamlessly integrate with polished front-end designs. I strive to stay abreast 
+					of the latest trends and best practices in web development to ensure the delivery 
+					of high-quality, modern web applications. The combination of my skills allows me 
+					to craft functional, dynamic, and aesthetically pleasing web experiences for users.
+					</p>
+					<br>
+					In addition to my expertise in web development, I also delve into software 
+					development, particularly in C++. I have a penchant for crafting games and 
+					leveraging C++ for diverse software projects. I often employ the Qt framework 
+					to design sleek and visually appealing interfaces, adding an element of 
+					sophistication to the user experience. My proficiency in C++ extends to creating 
+					software solutions that are both robust and visually engaging, offering an enriching
+					 experience to the end-users. This combination allows me to explore a broader 
+					 spectrum of development, ensuring a seamless connection between software 
+					 functionality and captivating interface design.
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>I am currently in the last year of a Bachelor's Degree in Computer Science.</p>
+				</div>
+			</section>
+			
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
