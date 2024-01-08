@@ -189,6 +189,13 @@ declare module 'astro:content' {
   collection: "work";
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
+"nested/dungeonExploration.md": {
+	id: "nested/dungeonExploration.md";
+  slug: "nested/dungeonexploration";
+  body: string;
+  collection: "work";
+  data: InferEntrySchema<"work">
+} & { render(): Render[".md"] };
 };
 
 	};

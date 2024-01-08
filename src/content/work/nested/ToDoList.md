@@ -6,7 +6,7 @@ img_alt: todoList
 description: A dynamic PHP To-Do List.
   .
 tags:
-  - PHP
+  - PHPp
   - HTML/CSS
   - JS
   - MariaDB
